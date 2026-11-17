@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Specialbeställning – Boppar &amp; ting</title>
+  <meta name="description" content="Beställ en egen lampa eller vas – berätta om färger, form, storlek eller ditt eget glas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="topbar">För varje såld (.)(.) vas skänks en del till bröstcancerforskningen</div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Boppar &amp; ting – till startsidan">
+        <span class="brand-mark" aria-hidden="true">Boppar &amp;<br />ting</span>
+        <span class="brand-name">Boppar &amp; ting</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Öppna meny">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Huvudmeny">
+        <ul>
+          <li><a href="lampor.html">Lampor</a></li>
+          <li><a href="vaser.html">(.)(.) Vaser</a></li>
+          <li><a href="om-mig.html">Om mig</a></li>
+          <li><a href="valgorenhet.html">Välgörenhet</a></li>
+          <li><a href="skotselrad.html">Skötselråd</a></li>
+        </ul>
+        <a href="specialbestallning.html" class="btn btn-dark btn-sm">Specialbeställ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-head">
+      <div class="container">
+        <span class="tag">Specialbeställning</span>
+        <h1 class="page-title">Drömmer du om en alldeles<br />egen lampa?</h1>
+        <p class="lead">Berätta vad du tänker dig – färger, form, storlek eller ett eget glas med minnen i. Anne hör av sig med förslag och pris.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:24px">
+      <div class="container order-layout">
+        <form class="form-card" data-form="special" novalidate enctype="multipart/form-data">
+          <input type="hidden" name="_subject" value="Ny specialbeställning" />
+
+          <div class="field-row">
+            <label class="field"><span>Namn</span>
+              <input type="text" name="namn" autocomplete="name" placeholder="Förnamn Efternamn" required /></label>
+            <label class="field"><span>E-post</span>
+              <input type="email" name="epost" autocomplete="email" placeholder="namn@exempel.se" required /></label>
+          </div>
+          <div class="field-row">
+            <label class="field"><span>Telefon</span>
+              <input type="tel" name="telefon" autocomplete="tel" placeholder="070-123 45 67" /></label>
+            <label class="field"><span>När behöver du den? (valfritt)</span>
+              <input type="text" name="nar" placeholder="t.ex. till en födelsedag 12/2" /></label>
+          </div>
+
+          <fieldset class="field">
+            <legend>Vad vill du ha?</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="typ" value="lampa" checked /><span>Lampa</span></label>
+              <label class="opt"><input type="radio" name="typ" value="vas" /><span>(.)(.) Vas</span></label>
+              <label class="opt"><input type="radio" name="typ" value="annat" /><span>Något annat</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="field color-studio" data-color-studio>
+            <legend>Färger du gillar</legend>
+            <p class="field-hint">Välj gärna flera – och berätta hur mycket du vill ha av varje.</p>
+
+            <div class="palette" data-palette role="group" aria-label="Färgpalett"></div>
+
+            <div class="mix" data-mix>
+              <div class="mix-head">
+                <span class="mix-title">Din palett</span>
+                <span class="mix-note" data-mix-note></span>
+              </div>
+              <div class="mix-strip" data-mix-strip aria-hidden="true"></div>
+              <ul class="mix-list" data-mix-list></ul>
+            </div>
+
+            <div class="mood">
+              <p class="mood-title">Känslan i färgerna</p>
+              <div class="scale scale--ton" data-scale>
+                <div class="scale-top"><span>Ton</span><output data-scale-out></output></div>
+                <input type="range" min="1" max="5" step="1" value="3" aria-label="Ton, från ljust till mörkt" />
+                <div class="scale-ends"><span>Ljust &amp; pastell</span><span>Mörkt &amp; djupt</span></div>
+                <input type="hidden" name="ton" data-labels="Ljust &amp; pastell|Ganska ljust|Mittemellan|Ganska mörkt|Mörkt &amp; djupt" />
+              </div>
+              <div class="scale scale--styrka" data-scale>
+                <div class="scale-top"><span>Styrka</span><output data-scale-out></output></div>
+                <input type="range" min="1" max="5" step="1" value="3" aria-label="Styrka, från dovt till klart" />
+                <div class="scale-ends"><span>Dovt &amp; dämpat</span><span>Klart &amp; starkt</span></div>
+                <input type="hidden" name="styrka" data-labels="Dovt &amp; dämpat|Lite dämpat|Lagom|Ganska klart|Klart &amp; starkt" />
+              </div>
+              <div class="scale scale--uttryck" data-scale>
+                <div class="scale-top"><span>Uttryck</span><output data-scale-out></output></div>
+                <input type="range" min="1" max="5" step="1" value="3" aria-label="Uttryck, från lugnt till lekfullt" />
+                <div class="scale-ends"><span>Lugnt, ton i ton</span><span>Färgglatt &amp; lekfullt</span></div>
+                <input type="hidden" name="uttryck" data-labels="Lugnt, ton i ton|Ganska lugnt|Lite av båda|Ganska lekfullt|Färgglatt &amp; lekfullt" />
+              </div>
+            </div>
+
+            <label class="field"><span>Något mer om färgerna? (valfritt)</span>
+              <input type="text" name="farg_kommentar" placeholder="t.ex. som en sommaräng, eller ska matcha gröna gardiner" /></label>
+          </fieldset>
+
+          <fieldset class="field">
+            <legend>Ungefärlig storlek</legend>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="storlek" value="liten" /><span>Liten · ca 15 cm</span></label>
+              <label class="opt"><input type="radio" name="storlek" value="mellan" checked /><span>Mellan · ca 22 cm</span></label>
+              <label class="opt"><input type="radio" name="storlek" value="stor" /><span>Stor · ca 30 cm</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="field">
+            <legend>Har du ett eget glas du vill använda?</legend>
+            <div class="choice-row">
+              <label class="choice">
+                <input type="radio" name="eget_glas" value="ja" />
+                <span class="choice-body"><strong>Ja, jag har ett eget glas</strong><small>T.ex. mormors gamla skål</small></span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="eget_glas" value="nej" checked />
+                <span class="choice-body"><strong>Nej, Anne får välja</strong><small>Hon har många loppisfynd</small></span>
+              </label>
+            </div>
+          </fieldset>
+
+          <label class="field"><span>Beskriv din idé</span>
+            <textarea name="ide" rows="4" placeholder="Berätta fritt – vem är den till, vilken känsla, vilket rum ska den stå i?" required></textarea></label>
+
+          <label class="dropzone" data-dropzone>
+            <input type="file" name="bild" accept="image/jpeg,image/png" />
+            <svg class="ph-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5-8 8"/></svg>
+            <span class="dropzone-label" data-dropzone-label>
+              <strong>Dra hit en bild eller klicka för att välja</strong>
+              <span>Inspiration eller en bild på ditt glas · JPG eller PNG</span>
+            </span>
+          </label>
+
+          <p class="form-error" data-form-error hidden>Något gick fel – försök igen eller mejla <a href="mailto:hej@bopparoting.se">hej@bopparoting.se</a>.</p>
+          <button type="submit" class="btn btn-dark btn-block btn-lg">Skicka förfrågan</button>
+          <p class="form-note">Du får en bekräftelse på mejlen direkt, och Anne hör av sig med förslag.</p>
+        </form>
+
+        <aside class="order-aside">
+          <div class="aside-card">
+            <h2>Så går det till</h2>
+            <ol class="how-steps">
+              <li><span>1</span><div><strong>Du berättar</strong><p>Fyll i formuläret – ju mer du berättar, desto bättre.</p></div></li>
+              <li><span>2</span><div><strong>Anne återkommer</strong><p>Med förslag, pris och ungefär när den kan vara klar.</p></div></li>
+              <li><span>3</span><div><strong>Hon skapar</strong><p>Glaset hittas, målas och får sitt ljus.</p></div></li>
+              <li><span>4</span><div><strong>Du hämtar</strong><p>Hämta och Swisha på plats.</p></div></li>
+            </ol>
+          </div>
+          <div class="aside-card aside-media placeholder"><svg class="ph-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5-8 8"/></svg><span>Bild</span></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer--simple">
+    <div class="container footer-inner">
+      <a href="index.html" class="wordmark">Boppar &amp; ting</a>
+      <p class="small muted">© <span id="year">2026</span> Boppar &amp; ting · Hemsida av [ert namn]</p>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="color-studio.js"></script>
+  <script src="forms.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

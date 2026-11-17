@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Admin – Boppar &amp; ting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body class="admin-body">
+  <div class="admin-shell">
+
+    <aside class="admin-side">
+      <div class="admin-brand">
+        <span class="admin-logo" aria-hidden="true">B&amp;t</span>
+        <span><strong>Boppar &amp; ting</strong><small>Admin</small></span>
+        <button class="admin-menu-btn" aria-label="Meny"><span></span><span></span></button>
+      </div>
+
+      <nav class="admin-nav" aria-label="Admin">
+        <a href="#produkter">Produkter</a>
+        <a href="#bokningar">Bokningar <span class="a-badge" data-badge="bokningar"></span></a>
+        <a href="#forfragningar">Förfrågningar <span class="a-badge" data-badge="forfragningar"></span></a>
+        <a href="#valgorenhet">Välgörenhet</a>
+        <a href="#fargtema">Färgtema</a>
+      </nav>
+
+      <div class="admin-side-foot">
+        <a href="../index.html" target="_blank" rel="noopener">Visa hemsidan ↗</a>
+        <a href="#" data-reset title="Återställer exempeldatan">Återställ exempeldata</a>
+        <a href="#">Logga ut</a>
+      </div>
+    </aside>
+
+    <main class="admin-main" id="view"></main>
+  </div>
+
+  <!-- Bekräfta -->
+  <dialog class="a-modal a-modal--sm" id="confirm-modal">
+    <div class="a-modal-body a-modal-body--text">
+      <h2 data-confirm-title></h2>
+      <p data-confirm-text></p>
+    </div>
+    <footer class="a-modal-foot">
+      <button type="button" class="btn btn-outline" data-close>Avbryt</button>
+      <button type="button" class="btn btn-danger" data-confirm-ok>Ta bort</button>
+    </footer>
+  </dialog>
+
+  <!-- Gåva (Välgörenhet) -->
+  <dialog class="a-modal a-modal--sm" id="gift-modal">
+    <form id="gift-form" novalidate>
+      <header class="a-modal-head">
+        <h2 data-gift-title>Lägg till gåva</h2>
+        <button type="button" class="a-close" data-close aria-label="Stäng">×</button>
+      </header>
+      <div class="a-modal-body a-modal-body--stack">
+        <div class="field-row">
+          <label class="field"><span>Datum</span><input type="date" name="date" required /></label>
+          <label class="field"><span>Belopp (kr)</span><input type="number" name="amount" min="1" step="1" required /></label>
+        </div>
+        <label class="field"><span>Organisation</span><select name="org" class="a-select"></select></label>
+        <label class="check"><input type="checkbox" name="receipt" /><span>Kvittot är delat på Instagram</span></label>
+      </div>
+      <footer class="a-modal-foot">
+        <button type="button" class="a-link a-link--danger a-mr-auto" data-gift-delete hidden>Ta bort gåvan</button>
+        <button type="button" class="btn btn-outline" data-close>Avbryt</button>
+        <button type="submit" class="btn btn-dark">Spara</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <div class="a-toast" data-toast role="status" aria-live="polite"></div>
+
+  <script src="admin-data.js"></script>
+  <script src="admin.js"></script>
+  <script src="views/products.js"></script>
+  <script src="views/product-edit.js"></script>
+  <script src="views/bookings.js"></script>
+  <script src="views/requests.js"></script>
+  <script src="views/charity.js"></script>
+  <script src="views/theme.js"></script>
+  <script>Admin.init();</script>
+</body>
+</html>

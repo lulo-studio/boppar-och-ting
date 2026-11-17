@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alla produkter – Boppar &amp; ting</title>
+  <meta name="description" content="Allt som finns i ateljén just nu – lampor och vaser i återbrukat glas och lera." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="topbar">För varje såld (.)(.) vas skänks en del till bröstcancerforskningen</div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Boppar &amp; ting – till startsidan">
+        <span class="brand-mark" aria-hidden="true">Boppar &amp;<br />ting</span>
+        <span class="brand-name">Boppar &amp; ting</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Öppna meny">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Huvudmeny">
+        <ul>
+          <li><a href="lampor.html">Lampor</a></li>
+          <li><a href="vaser.html">(.)(.) Vaser</a></li>
+          <li><a href="om-mig.html">Om mig</a></li>
+          <li><a href="valgorenhet.html">Välgörenhet</a></li>
+          <li><a href="skotselrad.html">Skötselråd</a></li>
+        </ul>
+        <a href="specialbestallning.html" class="btn btn-dark btn-sm">Specialbeställ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-head">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">Hem</a><span>/</span>Alla produkter</p>
+        <h1 class="page-title">Alla produkter</h1>
+        <p class="lead">Allt som finns i ateljén just nu – lampor och vaser. Unika exemplar, gjorda för hand av återbrukat glas och lera.</p>
+        
+      </div>
+    </section>
+
+    <section class="shop" id="shop" data-category="alla" data-page-size="12">
+      <div class="container">
+        <div class="toolbar">
+          <div class="toolbar-left">
+            <div class="chips" data-chips role="group" aria-label="Filtrera"></div>
+            <span class="toolbar-sep" aria-hidden="true"></span>
+            <label class="chip-toggle">
+              <input type="checkbox" data-only-available />
+              Bara tillgängliga
+            </label>
+          </div>
+          <div class="toolbar-right">
+            <label class="select">
+              <span class="sr-only">Sortera</span>
+              <select data-sort aria-label="Sortera">
+                <option value="nyast">Sortera: Nyast först</option>
+                <option value="pris-lag">Sortera: Pris, lägst först</option>
+                <option value="pris-hog">Sortera: Pris, högst först</option>
+                <option value="namn">Sortera: Namn A–Ö</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div class="product-grid" data-grid aria-live="polite"></div>
+        <div class="load-more">
+          <p class="small muted" data-count></p>
+          <button type="button" class="btn btn-outline" data-more>Visa fler</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band cta-band--pink">
+      <div class="container cta-band-inner">
+        <div>
+          <h2>Vill du ha något alldeles eget?</h2>
+          <p>Berätta vad du drömmer om så skapar Anne det åt dig.</p>
+        </div>
+        <a href="specialbestallning.html" class="btn btn-dark">Specialbeställ</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer--simple">
+    <div class="container footer-inner">
+      <a href="index.html" class="wordmark">Boppar &amp; ting</a>
+      <p class="small muted">© <span id="year">2026</span> Boppar &amp; ting · Hemsida av [ert namn]</p>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="products.js"></script>
+  <script src="shop.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
