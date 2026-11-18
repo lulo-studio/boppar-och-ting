@@ -151,6 +151,12 @@ p { margin: 0; }
   font-size: 0.6rem;
   line-height: 1.05;
 }
+.brand-logo {
+  width: 56px;
+  height: 56px;
+  display: block;
+  flex: none;
+}
 .brand-name {
   font-family: var(--serif);
   font-size: 1.45rem;
@@ -518,6 +524,7 @@ p { margin: 0; }
   .section { padding: 60px 0; }
   .header-inner { height: 72px; }
   .brand-name { font-size: 1.25rem; }
+  .brand-logo { width: 48px; height: 48px; }
   .category-grid { grid-template-columns: 1fr; }
   .category-card { min-height: 140px; }
   .steps { grid-template-columns: 1fr; gap: 32px; }
