@@ -10,13 +10,13 @@
       id: "standard",
       name: "Standard",
       desc: "Plommon och röd-rosa. Används till vardags.",
-      bar: "För varje såld (.)(.) vas skänks en del…",
+      bar: "För varje såld lampa och (.)(.) vas skänks en del…",
     },
     {
       id: "rosa",
       name: "Bröstcancer-tema",
       desc: "Mer rosa. Passar bra under Rosa oktober och andra insamlingar till bröstcancerforskningen.",
-      bar: "Oktober är bröstcancermånaden ♡",
+      bar: "Rosa oktober – stötta bröstcancerforskningen ♡",
     },
   ];
 
@@ -26,7 +26,7 @@
       <div class="m-head"><span class="m-logo"></span><span class="m-brand">Boppar &amp; ting</span><span class="m-btn">Specialbeställ</span></div>
       <div class="m-hero">
         <div>
-          <p class="m-h1">Gamla skålar.<br /><em>Nya ljus.</em></p>
+          <p class="m-h1">Gamla skålar<br /><em>Nya ljus</em></p>
           <span class="m-cta">Se lamporna</span>
         </div>
         <span class="m-img"></span>

@@ -24,7 +24,7 @@ const ADMIN_SEED = {
     { id: "skogsglantan",   name: "Skogsgläntan",          category: "lampa", price: 695, size: 28, status: "sald",        hidden: false, uploaded: "2026-09-20", soldAt: "2026-10-20", images: [] },
     { id: "rosa-vas",       name: "Rosa (.)(.) vas",       category: "vas",   price: 450, size: 18, status: "bokad",       hidden: false, uploaded: "2026-09-28", images: [] },
     { id: "rosenknoppen",   name: "Rosenknoppen",          category: "lampa", price: 650, size: 25, status: "tillganglig", hidden: false, uploaded: "2026-09-26", images: [] },
-    { id: "mintkupolen",    name: "Mintkupolen",           category: "lampa", price: 650, size: 24, status: "tillganglig", hidden: false, uploaded: "2026-09-22", images: [], desc: "En frostad glaskupa från loppis, med en fot i mintgröna ränder. Sladdlös ljusslinga." },
+    { id: "mintkupolen",    name: "Mintkupolen",           category: "lampa", price: 650, size: 24, status: "tillganglig", hidden: false, uploaded: "2026-09-22", images: [], desc: "En frostad glaskupa från loppis, med en fot i mintgröna ränder. Sladdlös ljuspuck med fjärrkontroll." },
     { id: "blabarsdrommen", name: "Blåbärsdrömmen",        category: "lampa", price: 695, size: 28, status: "tillganglig", hidden: false, uploaded: "2026-09-18", images: [] },
     { id: "sandfargad-vas", name: "Sandfärgad (.)(.) vas", category: "vas",   price: 450, size: 20, status: "tillganglig", hidden: false, uploaded: "2026-09-15", images: [] },
     { id: "plommon-vas",    name: "Plommon (.)(.) vas",    category: "vas",   price: 425, size: 16, status: "tillganglig", hidden: false, uploaded: "2026-09-10", images: [] },
@@ -57,8 +57,8 @@ const ADMIN_SEED = {
   charity: {
     orgs: ["Bröstcancerförbundet", "Barncancerfonden"],
     current: "Bröstcancerförbundet",
-    text: "För varje såld (.)(.) vas skänker jag en del till Bröstcancerförbundet.",
-    total: 12450,
+    text: "För varje såld lampa och (.)(.) vas skänker jag en del till välgörenhet – oftast till Bröstcancerförbundet.",
+    total: 15310,
     period: "1–31 oktober",
     showTotal: true,
     gifts: [

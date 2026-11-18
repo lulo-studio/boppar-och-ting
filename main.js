@@ -27,7 +27,7 @@ if (year) year.textContent = new Date().getFullYear();
 // Färgtema – från config.js, eller förhandsgranskning via ?tema=rosa
 (function () {
   const THEMES = {
-    rosa: { cls: "theme-rosa", bar: "Oktober är bröstcancermånaden ♡" },
+    rosa: { cls: "theme-rosa", bar: "Rosa oktober – stötta bröstcancerforskningen ♡" },
   };
   let theme = typeof THEME !== "undefined" ? THEME : "standard";
   try {

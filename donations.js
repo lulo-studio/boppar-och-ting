@@ -14,6 +14,15 @@ const DONATIONS = [
   { date: "2025-12-28", org: "Bröstcancerförbundet", amount: 500, receipt: null },
 ];
 
+// ----------------------------------------------------------
+// STARTBELOPP – TILLFÄLLIGT!
+// Gåvor från 2021 och framåt som ännu inte finns i listan ovan.
+// 12 360 kr + listans gåvor (2 950 kr) = 15 310 kr.
+// TA BORT startbeloppet (sätt det till 0) när hela gåvolistan
+// från 2021 är inlagd i DONATIONS – annars räknas gåvorna dubbelt.
+// ----------------------------------------------------------
+const EARLIER_TOTAL = 12360;
+
 (function () {
   const MONTHS = ["jan", "feb", "mars", "apr", "maj", "juni", "jul", "aug", "sep", "okt", "nov", "dec"];
   const fmtDate = (iso) => {
@@ -23,7 +32,7 @@ const DONATIONS = [
   const fmtKr = (n) => n.toLocaleString("sv-SE") + " kr";
 
   const sorted = DONATIONS.slice().sort((a, b) => b.date.localeCompare(a.date));
-  const total = sorted.reduce((sum, d) => sum + d.amount, 0);
+  const total = EARLIER_TOTAL + sorted.reduce((sum, d) => sum + d.amount, 0);
 
   // Summan – alla element med data-donation-total
   document.querySelectorAll("[data-donation-total]").forEach((el) => (el.textContent = fmtKr(total)));

@@ -224,6 +224,8 @@ p { margin: 0; }
   margin-bottom: 22px;
 }
 .hero-title em { color: var(--pink); font-style: italic; }
+/* Startsidans rubrik: rakare och stramare (lägre optisk storlek, tightare spärrning) */
+.hero > .container .hero-title { font-variation-settings: "opsz" 24; font-weight: 400; letter-spacing: -0.025em; }
 .lead { color: var(--ink-soft); max-width: 44ch; margin-bottom: 28px; }
 
 .checks {
@@ -474,6 +476,8 @@ p { margin: 0; }
 }
 .footer-links a { text-decoration: none; }
 .footer-links a:hover { color: var(--pink); }
+.footer-contact a { text-decoration: none; }
+.footer-contact a:hover { color: var(--pink); }
 
 /* ---------- Focus ---------- */
 :focus-visible { outline: 2px solid var(--pink); outline-offset: 3px; border-radius: 4px; }

@@ -24,8 +24,8 @@ const Admin = (() => {
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
   const PH = '<svg class="a-ph" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5-8 8"/></svg>';
-  const PICKUP = { blomaffaren: "Blomaffären [namn]", hemma: "Hemma hos Anne" };
-  const PICKUP_SHORT = { blomaffaren: "hämtar i blomaffären", hemma: "hämtar hemma hos Anne" };
+  const PICKUP = { blomaffaren: "Kvistar & Krus", hemma: "Hemma hos Anne" };
+  const PICKUP_SHORT = { blomaffaren: "hämtar hos Kvistar & Krus", hemma: "hämtar hemma hos Anne" };
 
   const views = {};
 

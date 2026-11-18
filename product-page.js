@@ -31,14 +31,14 @@
   const desc =
     p.desc ||
     (isLamp
-      ? "Återbrukat glas från loppis, handmålat och med sladdlös ljusslinga. Ställ den på byrån, i fönstret eller på middagsbordet."
-      : "En rund och glad vas i lera, formad och målad för hand. En del av priset går till Bröstcancerförbundet.");
+      ? "Återbrukat glas från loppis, handmålat och med en sladdlös ljuspuck som du styr med fjärrkontroll. Ställ den på byrån, i fönstret eller på middagsbordet."
+      : "Återbrukad kruka klädd i lufttorkande lera. En del av priset går till Bröstcancerförbundet.");
 
   const features = [
     `Höjd ca ${p.size} cm`,
     ...(isLamp
-      ? ["Sladdlös ljusslinga", "Återbrukat glas, handmålad fot"]
-      : ["Formad för hand i lera", "En del går till Bröstcancerförbundet"]),
+      ? ["Sladdlös ljuspuck med fjärrkontroll", "Återbrukat glas, handmålad fot"]
+      : ["Återbrukad kruka klädd i lufttorkande lera", "En del går till Bröstcancerförbundet"]),
     "Unikt exemplar – finns bara en",
   ];
 
@@ -66,7 +66,7 @@
     : `
       <form class="form-card" data-form="booking" novalidate>
         <h2>Boka ${noun}</h2>
-        <p class="muted small">Fyll i dina uppgifter så reserveras ${noun} direkt i ditt namn.</p>
+        <p class="muted small">Fyll i dina uppgifter så reserveras ${noun} direkt i ditt namn. Bokningen gäller i 7 dagar.</p>
         <input type="hidden" name="produkt" value="${p.id}" />
         <input type="hidden" name="_subject" value="Ny bokning: ${p.name}" />
 
